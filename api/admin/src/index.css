@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .btn__style {
+    @apply text-white rounded-lg text-2xl font-normal hover:bg-gray-600;
+  }
+
+  .nav__style {
+    @apply sm:space-x-6 sm:mt-0 sm:static sm:top-0 sm:left-0 sm:bg-none sm:border-0 sm:rounded-none sm:w-auto sm:p-0 sm:shadow-none mt-8 shadow-xl absolute top-full left-0 bg-white border-2 border-solid border-gray-800 rounded-lg w-full p-6;
+  }
+
+  .navBtn__style {
+    @apply text-gray-500 text-2xl hover:text-green-600 hover:underline font-normal sm:inline-block sm:border-l-0 sm:px-0 block border-0 border-l-2 border-solid border-green-600 px-4;
+  }
+}
+
+:root {
+  --green: #27ae60;
+  --orange: #f39c12;
+  --red: #e74c3c;
+  --black: #333;
+  --light-color: #666;
+  --white: #fff;
+  --light-bg: #f6f6f6;
+  --border: .2rem solid var(--black);
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: var(--black);
+}
+
+*::selection {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+*::-webkit-scrollbar {
+  height: .5rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+}
+
+body {
+  background-color: var(--light-bg);
+}
+
+html {
+  font-size: 50%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+.userProfile {
+  margin-top: 4rem;
+  animation: fadeUp .2s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  100% {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (min-width: 1250px) {
+  html {
+    font-size: 62.5%;
+  }
+}
